@@ -1,0 +1,401 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+body {
+  font-family: 'Open Sans Condensed';
+  padding: 20px 40px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.header {
+  height: 70px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.header .logo-container {
+  height: 100%;
+  width: 70px;
+  padding: 25px;
+}
+
+.header .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 50%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .options .option {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.header .options .cart-icon {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.header .options .cart-icon .shopping-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.header .options .cart-dropdown {
+  position: absolute;
+  width: 240px;
+  height: 340px;
+  display: none;
+  background-color: white;
+  border: 1px solid black;
+  top: 90px;
+  right: 40px;
+  padding: 20px;
+  z-index: 5;
+}
+
+.header .options .cart-dropdown.show {
+  display: block;
+}
+
+.header .options .cart-dropdown .cart-items {
+  height: 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: scroll;
+}
+
+.header .options .cart-dropdown .cart-item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.header .options .cart-dropdown .cart-item img {
+  width: 30%;
+}
+
+.header .options .cart-dropdown .cart-item .item-details {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 20px;
+}
+
+.header .options .cart-dropdown .cart-item .item-details .name {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.header .options .cart-dropdown .cart-item .item-details .price {
+  font-size: 18px;
+}
+
+.header .options .cart-dropdown .custom-button {
+  width: 100%;
+  height: 40px;
+  background-color: #000;
+  color: white;
+  padding: 20px auto;
+  margin: 20px auto;
+}
+
+.header .options .cart-dropdown .custom-button:hover {
+  background-color: lightgrey;
+  color: black;
+}
+
+.homepage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.homepage .directory-menu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.homepage .directory-menu .menu-item {
+  width: 30%;
+  height: 240px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid black;
+  margin: 7px;
+  overflow: hidden;
+}
+
+.homepage .directory-menu .menu-item:hover {
+  cursor: pointer;
+}
+
+.homepage .directory-menu .menu-item:hover .background-image {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  transition: -webkit-transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95), -webkit-transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+}
+
+.homepage .directory-menu .menu-item:hover .content {
+  opacity: 0.9;
+}
+
+.homepage .directory-menu .menu-item.large {
+  height: 320px;
+}
+
+.homepage .directory-menu .menu-item:first-child {
+  margin-right: 7.5px;
+}
+
+.homepage .directory-menu .menu-item.last-child {
+  margin-left: 7.5px;
+}
+
+.homepage .directory-menu .menu-item .background-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.homepage .directory-menu .menu-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 240px;
+}
+
+.homepage .directory-menu .menu-item .content {
+  height: 90px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid black;
+  background-color: white;
+  opacity: 0.5;
+  position: absolute;
+}
+
+.homepage .directory-menu .menu-item .content .title {
+  font-weight: bold;
+  font-size: 20px;
+  color: #4a4a4a;
+}
+
+.homepage .directory-menu .menu-item .content .subtitle {
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+.collection-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.collection-page .title {
+  font-size: 38px;
+  margin: 15px auto;
+}
+
+.collection-page .items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.collection-item {
+  width: 22vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 300px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.collection-item .image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 5px;
+}
+
+.collection-item .custom-button {
+  width: 80%;
+  position: absolute;
+  top: 205px;
+  display: none;
+  opacity: 0.7;
+  padding: 10px 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.collection-item .custom-button:hover {
+  background-color: #000;
+  color: white;
+}
+
+.collection-item:hover .image {
+  opacity: 0.8;
+}
+
+.collection-item:hover .custom-button {
+  opacity: 0.85;
+  display: block;
+}
+
+.collection-footer {
+  width: 100%;
+  height: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 14px;
+}
+
+.collection-overview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.collection-preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.collection-preview .title {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.collection-preview .preview {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
